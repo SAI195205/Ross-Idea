@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referenzen – Zimmerei Roß</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">
+<img src="assets/img/logo.png">
+</div>
+
+<div class="menu">
+<a href="index.html">Start</a>
+<a href="unternehmen.html">Unternehmen</a>
+<a href="leistungen.html">Leistungen</a>
+<a href="referenzen.html">Referenzen</a>
+<a href="kontakt.html">Kontakt</a>
+</div>
+</div>
+</header>
+
+<section class="section">
+<h1>Referenzen</h1>
+
+<div class="ref-grid">
+
+<!-- GROSSES PROJEKT -->
+<div class="ref-item ref-large"
+data-title="Dachstuhl Neubau"
+data-text="Neubau Dachstuhl inkl. Abbund, Montage und Detailanschlüsse."
+data-hero="assets/img/ref1.jpg"
+data-gallery="assets/img/ref1.jpg,assets/img/ref2.jpg,assets/img/ref3.jpg">
+<img src="assets/img/ref1.jpg">
+</div>
+
+<!-- HOCHFORMAT -->
+<div class="ref-item ref-tall"
+data-title="Holzhalle Gewerbe"
+data-text="Holztragwerk für Gewerbehalle mit großen Spannweiten."
+data-hero="assets/img/ref2.jpg"
+data-gallery="assets/img/ref2.jpg,assets/img/ref3.jpg">
+<img src="assets/img/ref2.jpg">
+</div>
+
+<!-- KLEIN -->
+<div class="ref-item ref-small"
+data-title="Dachsanierung"
+data-text="Sanierung und Verstärkung Bestandskonstruktion."
+data-hero="assets/img/ref3.jpg"
+data-gallery="assets/img/ref3.jpg,assets/img/ref1.jpg">
+<img src="assets/img/ref3.jpg">
+</div>
+
+<!-- KLEIN -->
+<div class="ref-item ref-small"
+data-title="Carport Anlage"
+data-text="Carport Konstruktion mit sichtbarer Holzstruktur."
+data-hero="assets/img/ref4.jpg"
+data-gallery="assets/img/ref4.jpg,assets/img/ref2.jpg">
+<img src="assets/img/ref4.jpg">
+</div>
+
+<!-- BREIT -->
+<div class="ref-item ref-wide"
+data-title="Dachausbau"
+data-text="Ausbau im Bestand inklusive Anpassung Tragstruktur."
+data-hero="assets/img/ref5.jpg"
+data-gallery="assets/img/ref5.jpg,assets/img/ref6.jpg">
+<img src="assets/img/ref5.jpg">
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Zimmerei Roß · Neuenrade
+</footer>
+
+<!-- POPUP -->
+<div class="modal" id="modal">
+<div class="modal-box">
+
+<div class="modal-body">
+<span class="modal-close" id="close">×</span>
+
+<h2 id="modalTitle"></h2>
+
+<img class="modal-hero" id="modalHero">
+
+<p id="modalText"></p>
+
+<div class="modal-gallery" id="modalGallery"></div>
+
+</div>
+</div>
+</div>
+
+<script>
+
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalHero = document.getElementById("modalHero");
+const modalText = document.getElementById("modalText");
+const modalGallery = document.getElementById("modalGallery");
+
+document.querySelectorAll(".ref-item").forEach(card => {
+
+card.addEventListener("click", () => {
+
+modalTitle.textContent = card.dataset.title;
+modalHero.src = card.dataset.hero;
+modalText.textContent = card.dataset.text;
+
+modalGallery.innerHTML = "";
+
+if(card.dataset.gallery){
+card.dataset.gallery.split(",").forEach(img => {
+
+let image = document.createElement("img");
+image.src = img.trim();
+modalGallery.appendChild(image);
+
+});
+}
+
+modal.classList.add("open");
+
+});
+
+});
+
+document.getElementById("close").onclick = () => modal.classList.remove("open");
+modal.onclick = e => { if(e.target === modal) modal.classList.remove("open"); };
+
+</script>
+
+</body>
+</html>
