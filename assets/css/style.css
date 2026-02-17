@@ -189,3 +189,85 @@ footer{
   padding:40px 20px;
   text-align:center;
 }
+/* =========================
+MOBILE NAV (Hamburger / Drawer)
+========================= */
+
+.burger{
+  display:none;
+  border:0;
+  background:transparent;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  padding:8px 10px;
+}
+
+.drawer{
+  position:fixed;
+  top:0;
+  right:-320px;
+  width:320px;
+  height:100vh;
+  background:white;
+  border-left:1px solid #e6e6e6;
+  box-shadow:-20px 0 50px rgba(0,0,0,0.15);
+  transition:0.25s;
+  z-index:1000;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.drawer a{
+  text-decoration:none;
+  color:#1b1f1d;
+  padding:10px 8px;
+  border:1px solid #eee;
+  background:#fff;
+}
+
+.drawer a:hover{
+  border-color:#d8b24c;
+}
+
+.drawer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.drawer-close{
+  border:0;
+  background:transparent;
+  font-size:30px;
+  cursor:pointer;
+  line-height:1;
+}
+
+.backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  pointer-events:none;
+  transition:0.25s;
+  z-index:999;
+}
+
+/* OPEN STATE */
+.nav-open .drawer{ right:0; }
+.nav-open .backdrop{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 900px){
+  .menu{ display:none; }
+  .burger{ display:inline-block; }
+  .nav{ padding:14px 14px; } /* etwas kompakter */
+}
+
