@@ -10,18 +10,36 @@
 <body>
 
 <header>
-<div class="nav">
-<div class="logo"><img src="assets/img/logo.png"></div>
+  <div class="nav">
+    <div class="logo"><img src="assets/img/logo.png" alt="Logo"></div>
 
-<div class="menu">
-<a href="index.html">Start</a>
-<a href="unternehmen.html">Unternehmen</a>
-<a href="leistungen.html">Leistungen</a>
-<a href="referenzen.html">Referenzen</a>
-<a href="kontakt.html">Kontakt</a>
-</div>
-</div>
+    <div class="menu">
+      <a href="index.html">Start</a>
+      <a href="unternehmen.html">Unternehmen</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Menü öffnen">☰</button>
+  </div>
 </header>
+
+<div class="backdrop" id="backdrop"></div>
+
+<nav class="drawer" id="drawer" aria-label="Mobile Navigation">
+  <div class="drawer-top">
+    <strong style="color:#d8b24c;">Menü</strong>
+    <button class="drawer-close" id="drawerClose" aria-label="Menü schließen">×</button>
+  </div>
+
+  <a href="index.html">Start</a>
+  <a href="unternehmen.html">Unternehmen</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="referenzen.html">Referenzen</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
 
 <main>
 
@@ -48,3 +66,4 @@ Zimmerei Roß · Neuenrade · Tel. 02392 / 61361
 
 </body>
 </html>
+
