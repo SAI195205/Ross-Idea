@@ -13,11 +13,9 @@
   closeBtn.addEventListener("click", close);
   backdrop.addEventListener("click", close);
 
-  // ESC schließt
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
 
-  // Klick auf Link schließt auch
   drawer.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 })();
