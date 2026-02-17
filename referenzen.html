@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Referenzen – Zimmerei Roß</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referenzen – Zimmerei Roß</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
 <header>
   <div class="nav">
-    <div class="logo"><img src="assets/img/logo.png" alt="Logo"></div>
+    <div class="logo"><img src="assets/img/logo.png" alt="Zimmerei Roß Logo"></div>
 
     <div class="menu">
       <a href="index.html">Start</a>
@@ -40,125 +39,104 @@
   <a href="kontakt.html">Kontakt</a>
 </nav>
 
+<main>
+  <section class="section">
+    <h1>Referenzen</h1>
 
-<section class="section">
-<h1>Referenzen</h1>
+    <div class="ref-grid">
 
-<div class="ref-grid">
+      <div class="ref-item ref-large"
+        data-title="Dachstuhl Neubau"
+        data-text="Neubau Dachstuhl inkl. Abbund, Montage und Detailanschlüsse."
+        data-hero="assets/img/ref1.jpg"
+        data-gallery="assets/img/ref1.jpg,assets/img/ref2.jpg,assets/img/ref3.jpg">
+        <img src="assets/img/ref1.jpg" alt="Dachstuhl Neubau">
+      </div>
 
-<!-- GROSSES PROJEKT -->
-<div class="ref-item ref-large"
-data-title="Dachstuhl Neubau"
-data-text="Neubau Dachstuhl inkl. Abbund, Montage und Detailanschlüsse."
-data-hero="assets/img/ref1.jpg"
-data-gallery="assets/img/ref1.jpg,assets/img/ref2.jpg,assets/img/ref3.jpg">
-<img src="assets/img/ref1.jpg">
-</div>
+      <div class="ref-item ref-tall"
+        data-title="Holzhalle Gewerbe"
+        data-text="Holztragwerk für Gewerbehalle mit großen Spannweiten."
+        data-hero="assets/img/ref2.jpg"
+        data-gallery="assets/img/ref2.jpg,assets/img/ref3.jpg">
+        <img src="assets/img/ref2.jpg" alt="Holzhalle Gewerbe">
+      </div>
 
-<!-- HOCHFORMAT -->
-<div class="ref-item ref-tall"
-data-title="Holzhalle Gewerbe"
-data-text="Holztragwerk für Gewerbehalle mit großen Spannweiten."
-data-hero="assets/img/ref2.jpg"
-data-gallery="assets/img/ref2.jpg,assets/img/ref3.jpg">
-<img src="assets/img/ref2.jpg">
-</div>
+      <div class="ref-item ref-small"
+        data-title="Dachsanierung"
+        data-text="Sanierung und Verstärkung der Bestandskonstruktion."
+        data-hero="assets/img/ref3.jpg"
+        data-gallery="assets/img/ref3.jpg,assets/img/ref1.jpg">
+        <img src="assets/img/ref3.jpg" alt="Dachsanierung">
+      </div>
 
-<!-- KLEIN -->
-<div class="ref-item ref-small"
-data-title="Dachsanierung"
-data-text="Sanierung und Verstärkung Bestandskonstruktion."
-data-hero="assets/img/ref3.jpg"
-data-gallery="assets/img/ref3.jpg,assets/img/ref1.jpg">
-<img src="assets/img/ref3.jpg">
-</div>
+      <div class="ref-item ref-small"
+        data-title="Carport Anlage"
+        data-text="Carport-Konstruktion mit sauberer Detailausbildung."
+        data-hero="assets/img/ref4.jpg"
+        data-gallery="assets/img/ref4.jpg,assets/img/ref2.jpg">
+        <img src="assets/img/ref4.jpg" alt="Carport">
+      </div>
 
-<!-- KLEIN -->
-<div class="ref-item ref-small"
-data-title="Carport Anlage"
-data-text="Carport Konstruktion mit sichtbarer Holzstruktur."
-data-hero="assets/img/ref4.jpg"
-data-gallery="assets/img/ref4.jpg,assets/img/ref2.jpg">
-<img src="assets/img/ref4.jpg">
-</div>
+      <div class="ref-item ref-wide"
+        data-title="Dachausbau"
+        data-text="Ausbau im Bestand inklusive Anpassung der Tragstruktur."
+        data-hero="assets/img/ref5.jpg"
+        data-gallery="assets/img/ref5.jpg,assets/img/ref6.jpg">
+        <img src="assets/img/ref5.jpg" alt="Dachausbau">
+      </div>
 
-<!-- BREIT -->
-<div class="ref-item ref-wide"
-data-title="Dachausbau"
-data-text="Ausbau im Bestand inklusive Anpassung Tragstruktur."
-data-hero="assets/img/ref5.jpg"
-data-gallery="assets/img/ref5.jpg,assets/img/ref6.jpg">
-<img src="assets/img/ref5.jpg">
-</div>
-
-</div>
-
-</section>
+    </div>
+  </section>
+</main>
 
 <footer>
-Zimmerei Roß · Neuenrade
+  Zimmerei Roß · Bahnhofstraße 30–36 · 58809 Neuenrade · Tel. 02392 / 61361
 </footer>
 
 <!-- POPUP -->
 <div class="modal" id="modal">
-<div class="modal-box">
-
-<div class="modal-body">
-<span class="modal-close" id="close">×</span>
-
-<h2 id="modalTitle"></h2>
-
-<img class="modal-hero" id="modalHero">
-
-<p id="modalText"></p>
-
-<div class="modal-gallery" id="modalGallery"></div>
-
-</div>
-</div>
+  <div class="modal-box">
+    <div class="modal-body" style="position:relative;">
+      <span id="close" style="position:absolute; right:20px; top:15px; font-size:28px; cursor:pointer;">×</span>
+      <h2 id="modalTitle"></h2>
+      <img class="modal-hero" id="modalHero" alt="Referenzbild">
+      <p id="modalText"></p>
+      <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+  </div>
 </div>
 
 <script>
+  // Referenzen Popup
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalHero = document.getElementById("modalHero");
+  const modalText = document.getElementById("modalText");
+  const modalGallery = document.getElementById("modalGallery");
 
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalHero = document.getElementById("modalHero");
-const modalText = document.getElementById("modalText");
-const modalGallery = document.getElementById("modalGallery");
+  document.querySelectorAll(".ref-item").forEach(card => {
+    card.addEventListener("click", () => {
+      modalTitle.textContent = card.dataset.title || "";
+      modalHero.src = card.dataset.hero || "";
+      modalText.textContent = card.dataset.text || "";
 
-document.querySelectorAll(".ref-item").forEach(card => {
+      modalGallery.innerHTML = "";
+      const gallery = (card.dataset.gallery || "").split(",").map(s => s.trim()).filter(Boolean);
+      gallery.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        modalGallery.appendChild(img);
+      });
 
-card.addEventListener("click", () => {
+      modal.classList.add("open");
+    });
+  });
 
-modalTitle.textContent = card.dataset.title;
-modalHero.src = card.dataset.hero;
-modalText.textContent = card.dataset.text;
-
-modalGallery.innerHTML = "";
-
-if(card.dataset.gallery){
-card.dataset.gallery.split(",").forEach(img => {
-
-let image = document.createElement("img");
-image.src = img.trim();
-modalGallery.appendChild(image);
-
-});
-}
-
-modal.classList.add("open");
-
-});
-
-});
-
-document.getElementById("close").onclick = () => modal.classList.remove("open");
-modal.onclick = e => { if(e.target === modal) modal.classList.remove("open"); };
-
+  document.getElementById("close").onclick = () => modal.classList.remove("open");
+  modal.onclick = (e) => { if (e.target === modal) modal.classList.remove("open"); };
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") modal.classList.remove("open"); });
 </script>
 
 <script src="assets/js/nav.js"></script>
 </body>
 </html>
-
-
